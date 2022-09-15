@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground</title>
+    <style>
+        h1 {
+            margin: auto;
+            text-align: center;
+            padding: 2%;
+        }
+        main {
+            display: flex;
+            margin: auto;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        section {
+            width: 300px;
+            height: 300px;
+            margin: 10px;
+            background-color: lightblue;
+            border: 5px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1 >Welcome!</h1>
+    <main>
+        {% for i in range(0,repeats) %}
+        <section></section>
+        {% endfor %}
+    </main>
+    
+</body>
+</html>
