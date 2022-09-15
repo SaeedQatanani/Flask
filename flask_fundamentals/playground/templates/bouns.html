@@ -30,18 +30,18 @@
     <h1 >Welcome!</h1>
     <main>
         {% if mytemp == 0 %}
-            {% for i in range(0,3) %}
-            <section></section>
+            {% for i in range(0,3): %}
+                <section></section>
             {% endfor %}
         {% endif %}
         {% if mytemp == 1 %}
-            {% for i in range(0,repeats) %}
-            <section></section>
+            {% for i in range(0,repeats): %}
+                <section></section>
             {% endfor %}
         {% endif %}
         {% if mytemp == 2 %}
-            {% for i in range(0,repeats) %}
-            <section style="background-color: {{mycolor}};"></section>
+            {% for i in range(0,repeats): %}
+                <section style="background-color: {{mycolor}};"></section>
             {% endfor %}
         {% endif %}
     </main>
