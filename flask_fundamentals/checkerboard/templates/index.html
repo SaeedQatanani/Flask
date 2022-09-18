@@ -10,176 +10,32 @@
 </head>
 
 <body>
-<!-- Each challenage is done by itself. -->
-    {% if currentindex == 0 %}
-    <div class="row">
-        <div class="red"></div>
-        <div class="black"></div>
-        <div class="red"></div>
-        <div class="black"></div>
-        <div class="red"></div>
-        <div class="black"></div>
-        <div class="red"></div>
-        <div class="black"></div>
-    </div>
-    <div class="row">
-        <div class="black"></div>
-        <div class="red"></div>
-        <div class="black"></div>
-        <div class="red"></div>
-        <div class="black"></div>
-        <div class="red"></div>
-        <div class="black"></div>
-        <div class="red"></div>
-    </div>
-    <div class="row">
-        <div class="red"></div>
-        <div class="black"></div>
-        <div class="red"></div>
-        <div class="black"></div>
-        <div class="red"></div>
-        <div class="black"></div>
-        <div class="red"></div>
-        <div class="black"></div>
-    </div>
-    <div class="row">
-        <div class="black"></div>
-        <div class="red"></div>
-        <div class="black"></div>
-        <div class="red"></div>
-        <div class="black"></div>
-        <div class="red"></div>
-        <div class="black"></div>
-        <div class="red"></div>
-    </div>
-    <div class="row">
-        <div class="red"></div>
-        <div class="black"></div>
-        <div class="red"></div>
-        <div class="black"></div>
-        <div class="red"></div>
-        <div class="black"></div>
-        <div class="red"></div>
-        <div class="black"></div>
-    </div>
-    <div class="row">
-        <div class="black"></div>
-        <div class="red"></div>
-        <div class="black"></div>
-        <div class="red"></div>
-        <div class="black"></div>
-        <div class="red"></div>
-        <div class="black"></div>
-        <div class="red"></div>
-    </div>
-    <div class="row">
-        <div class="red"></div>
-        <div class="black"></div>
-        <div class="red"></div>
-        <div class="black"></div>
-        <div class="red"></div>
-        <div class="black"></div>
-        <div class="red"></div>
-        <div class="black"></div>
-    </div>
-    <div class="row">
-        <div class="black"></div>
-        <div class="red"></div>
-        <div class="black"></div>
-        <div class="red"></div>
-        <div class="black"></div>
-        <div class="red"></div>
-        <div class="black"></div>
-        <div class="red"></div>
-    </div>
-    {% endif %}
-
-    {% if currentindex == 1 %}
     {% for i in range(rows) %}
-    {% if i%2 == 0 %}
-    <div class="row">
-        <div class="red"></div>
-        <div class="black"></div>
-        <div class="red"></div>
-        <div class="black"></div>
-        <div class="red"></div>
-        <div class="black"></div>
-        <div class="red"></div>
-        <div class="black"></div>
-    </div>
-    {% endif %}
-    {% if i%2 == 1 %}
-    <div class="row">
-        <div class="black"></div>
-        <div class="red"></div>
-        <div class="black"></div>
-        <div class="red"></div>
-        <div class="black"></div>
-        <div class="red"></div>
-        <div class="black"></div>
-        <div class="red"></div>
-    </div>
-    {% endif %}
+        {% if i%2 == 0 %}
+            <div class="row">
+                {% for j in range(columns) %}
+                    {% if j%2 == 0 %}
+                        <div class="red" style="background-color: {{firstcolor}} ;"></div>
+                    {% endif %}
+                    {% if j%2 == 1 %}
+                        <div class="black" style="background-color: {{secondcolor}} ;"></div>
+                    {% endif %}
+                {% endfor %}
+        </div>
+        {% endif %}
+        {% if i%2 == 1 %}
+            <div class="row">
+                {% for j in range(columns) %}
+                    {% if j%2 == 0 %}
+                        <div class="black" style="background-color: {{secondcolor}} ;"></div>
+                    {% endif %}
+                    {% if j%2 == 1 %}
+                        <div class="red" style="background-color: {{firstcolor}} ;"></div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endif %}
     {% endfor %}
-    {% endif %}
-
-    {% if currentindex == 2 %}
-    {% for i in range(rows) %}
-    {% if i%2 == 0 %}
-    <div class="row">
-        {% for j in range(columns) %}
-        {% if j%2 == 0 %}
-        <div class="red"></div>
-        {% endif %}
-        {% if j%2 == 1 %}
-        <div class="black"></div>
-        {% endif %}
-        {% endfor %}
-    </div>
-    {% endif %}
-    {% if i%2 == 1 %}
-    <div class="row">
-        {% for j in range(columns) %}
-        {% if j%2 == 0 %}
-        <div class="black"></div>
-        {% endif %}
-        {% if j%2 == 1 %}
-        <div class="red"></div>
-        {% endif %}
-        {% endfor %}
-    </div>
-    {% endif %}
-    {% endfor %}
-    {% endif %}
-
-    {% if currentindex == 3 %}
-    {% for i in range(rows) %}
-    {% if i%2 == 0 %}
-    <div class="row">
-        {% for j in range(columns) %}
-        {% if j%2 == 0 %}
-        <div class="red" style="background-color: {{firstcolor}} ;"></div>
-        {% endif %}
-        {% if j%2 == 1 %}
-        <div class="black" style="background-color: {{secondcolor}} ;"></div>
-        {% endif %}
-        {% endfor %}
-    </div>
-    {% endif %}
-    {% if i%2 == 1 %}
-    <div class="row">
-        {% for j in range(columns) %}
-        {% if j%2 == 0 %}
-        <div class="black" style="background-color: {{secondcolor}} ;"></div>
-        {% endif %}
-        {% if j%2 == 1 %}
-        <div class="red" style="background-color: {{firstcolor}} ;"></div>
-        {% endif %}
-        {% endfor %}
-    </div>
-    {% endif %}
-    {% endfor %}
-    {% endif %}
 </body>
 
 </html>
