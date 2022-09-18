@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-family: sans-serif;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.red {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.black {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}
