@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 app = Flask(__name__)
 
+# Each route has its own html elements.
 @app.route('/')
 def rigid_board(index=0):
     return render_template('index.html', currentindex = index)

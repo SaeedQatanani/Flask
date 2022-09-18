@@ -6,6 +6,7 @@
     font-family: sans-serif;
 }
 
+/* This is the container. */
 .row {
     display: flex;
     justify-content: center;
