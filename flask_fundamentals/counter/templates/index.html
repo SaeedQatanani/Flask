@@ -10,5 +10,11 @@
 <body>
     <h1>Counter</h1>
     <p>{{ session['count'] }}<span>times</span></p>
+    <form action="/destroy">
+        <button type="submit">Reset</button>
+    </form>
+    <form action="/add_two">
+        <button type="submit">Add two visits</button>
+    </form>
 </body>
 </html>

@@ -24,3 +24,11 @@ input {
     height: 50px;
     border-radius: 5%;
 }
+
+button {
+    width: 100px;
+    height: 50px;
+    margin: 5%;
+    background-color: lightcoral;
+    border-radius: 5%;
+}
