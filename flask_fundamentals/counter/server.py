@@ -12,8 +12,7 @@ def index():
 @app.route('/destroy_session')
 def destroy_by_route():
     session.clear()	
-    index()
-    return render_template('index.html')
+    return redirect('/')
 
 @app.route('/add_two')
 def add_two():
